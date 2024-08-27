@@ -90,5 +90,31 @@
         }
         setInterval(nextSlide, 3000);
     </script>
+
+    <section id="loginForm">
+        <h2>Login</h2>
+        <form onsubmit="return validateForm()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <p id="passwordError" class="error">Password must be at least 8 characters long, contain one uppercase letter, and one number.</p>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    <script>
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const passwordError = document.getElementById('passwordError');
+            const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            
+            if (!passwordRegex.test(password)) {
+                passwordError.style.display = 'block';
+                return false;
+            }
+            passwordError.style.display = 'none';
+            return true;
+        }
+    </script>
+
+    
 </body>
 </html>
