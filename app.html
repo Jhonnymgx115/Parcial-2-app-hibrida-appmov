@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiTrain App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="/api/placeholder/40/40" alt="TrainTrack Logo" class="logo">
+            <span>OptiTrain</span>
+        </div>
+        <div class="navbar-menu" id="navbarMenu">
+            <a href="#home" class="active">Inicio</a>
+            <a href="#profile">Perfil</a>
+            <a href="#login" id="logoutButton">Cerrar Sesión</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Vista de Login/Registro -->
+        <section id="login" class="view">
+            <div class="hero">
+                <h1>Bienvenido a TrainTrack</h1>
+                <p>Tu compañero de entrenamiento personal</p>
+            </div>
+            <div class="content-image">
+                <img src="/api/placeholder/300/200" alt="Entrenamiento">
+            </div>
+            <form id="loginForm" class="form">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" placeholder="Nombre de usuario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            </form>
+            <div class="account-buttons">
+                <button class="google-btn">Continuar con Google</button>
+                <button class="facebook-btn">Continuar con Facebook</button>
+            </div>
+            <button id="showRegister" class="register-btn">Crear una cuenta</button>
+        </section>
+
+        <!-- Vista de Registro (inicialmente oculta) -->
+        <section id="register" class="view" style="display: none;">
+            <div class="hero">
+                <h1>Únete a TrainTrack</h1>
+                <p>Comienza tu viaje fitness hoy</p>
+            </div>
+            <div class="content-image">
+                <img src="/api/placeholder/300/200" alt="Registro">
+            </div>
+            <form id="registerForm" class="form">
+                <h2>Registro</h2>
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <input type="password" placeholder="Confirmar contraseña" required>
+                <label>
+                    <input type="checkbox" required>
+                    Acepto los términos y condiciones
+                </label>
+                <button type="submit">Registrarse</button>
+            </form>
+            <div class="account-buttons">
+                <button class="google-btn">Registrarse con Google</button>
+                <button class="facebook-btn">Registrarse con Facebook</button>
+            </div>
+            <button id="showLogin" class="login-btn">Ya tengo una cuenta</button>
+        </section>
+
+        <!-- Vista de Homepage (Dashboard) -->
+        <section id="home" class="view" style="display: none;">
+            <div class="hero">
+                <h1>Dashboard</h1>
+                <p>Resumen de tu progreso</p>
+            </div>
+            <div class="content-image">
+                <img src="/api/placeholder/300/200" alt="Dashboard">
+            </div>
+            <div class="training-history">
+                <h2>Historial de Actividades</h2>
+                <ul id="activityList"></ul>
+            </div>
+            <div class="todo-list">
+                <h2>Actividades por Realizar</h2>
+                <ul id="todoList"></ul>
+            </div>
+            <div class="recommendations">
+                <h2>Recomendaciones</h2>
+                <ul id="recommendationList"></ul>
+            </div>
+        </section>
+
+        <!-- Vista de Perfil -->
+        <section id="profile" class="view" style="display: none;">
+            <div class="hero">
+                <h1>Perfil de Usuario</h1>
+            </div>
+            <div class="user-info">
+                <img src="/api/placeholder/100/100" alt="Foto de perfil" class="profile-pic">
+                <h2 id="userName">Nombre de Usuario</h2>
+                <p id="userEmail">correo@ejemplo.com</p>
+            </div>
+            <div class="activity-history">
+                <h2>Historial Completo de Actividades</h2>
+                <ul id="fullActivityList"></ul>
+            </div>
+            <div class="user-stats">
+                <h2>Estadísticas Semanales</h2>
+                <div id="weeklyStats"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TrainTrack App. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
