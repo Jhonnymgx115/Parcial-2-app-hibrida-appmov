@@ -138,3 +138,58 @@ main {
 .form button:hover {
     background-color: var(--accent-color);
 }
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.account-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.account-buttons button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.google-btn {
+    background-color: #4285F4;
+    color: white;
+}
+
+.facebook-btn {
+    background-color: #3b5998;
+    color: white;
+}
+
+.register-btn,
+.login-btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.register-btn:hover,
+.login-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
