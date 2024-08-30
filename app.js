@@ -81,3 +81,10 @@ navLinks.forEach(link => {
         showView(viewId);
     });
 });
+
+
+// Mostrar formulario de registro
+showRegisterBtn.addEventListener('click', () => showView('register'));
+
+// Mostrar formulario de login
+showLoginBtn.addEventListener('click', () => showView('login'));
