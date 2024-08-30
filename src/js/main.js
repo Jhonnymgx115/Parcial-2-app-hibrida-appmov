@@ -1,5 +1,5 @@
 import { initializeLocalStorage } from '/src/js/modules/Localstorage/LocalStorage_Settings';
-import { updateDashboardInitial } from '/src/js/modules/Dashboard/Dashboard_Settings';
+import { updateDashboard } from '/src/js/modules/Dashboard/Dashboard_Settings';
 import { updateNavVisibility, showView  } from '/src/js/modules/Navegation/Navegation_Settings';
 import { ManageSession , validatePassword } from '/src/js/modules/Session/Sesion_Manager';
 
@@ -12,7 +12,7 @@ function initApp() {
     const currentUser = localStorage.getItem('currentUser');
     if (currentUser) {
         showView('home');
-        updateDashboardInitial();
+        updateDashboard();
     } else {
         showView('login');
     }

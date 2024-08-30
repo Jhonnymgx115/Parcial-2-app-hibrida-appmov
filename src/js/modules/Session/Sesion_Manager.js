@@ -1,5 +1,5 @@
 import {showView, updateNavVisibility}      from "../Navegation/Navegation_Settings";
-import {updateDashboardInitial}             from "../Dashboard/Dashboard_Settings";
+import { updateDashboard }             from "../Dashboard/Dashboard_Settings";
 
 // Elementos del DOM
 const loginForm = document.getElementById('loginForm');
@@ -38,7 +38,7 @@ export function ManageSession(){
         localStorage.setItem('users', JSON.stringify(users));
         localStorage.setItem('currentUser', JSON.stringify(newUser));
         showView('home');
-        updateDashboardInitial();
+        updateDashboard();
         updateNavVisibility();
     });
 
@@ -59,7 +59,7 @@ export function ManageSession(){
         if (user) {
             localStorage.setItem('currentUser', JSON.stringify(user));
             showView('home');
-            updateDashboardInitial();
+            updateDashboard();
             updateNavVisibility();
         } else {
             alert('Usuario o contraseña incorrectos');

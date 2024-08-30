@@ -1,14 +1,11 @@
-
-
-
 // Actualizar dashboard
-export function updateDashboardInitial() {
+export function updateDashboard() {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if (currentUser) {
         document.getElementById('userName').textContent = currentUser.fullName;
         document.getElementById('userEmail').textContent = currentUser.email;
 
-        updateActivityListInitial();
+        updateActivityList();
         updateTodoList();
         updateRecommendations();
         updateWeeklyStats();
@@ -16,7 +13,7 @@ export function updateDashboardInitial() {
 }
 
 // Funciones para actualizar las secciones del dashboard
-export function updateActivityList() {
+function updateActivityList() {
     const activityList = document.getElementById('activityList');
     activityList.innerHTML = '';
     const activities = JSON.parse(localStorage.getItem('activities'));
@@ -29,7 +26,7 @@ export function updateActivityList() {
     });
 }
 
-export function updateTodoList() {
+function updateTodoList() {
     const todoList = document.getElementById('todoList');
     todoList.innerHTML = '';
     const activities = JSON.parse(localStorage.getItem('activities'));
@@ -50,7 +47,7 @@ export function updateTodoList() {
     }
 }
 
-export function completeActivity(activityId) {
+function completeActivity(activityId) {
     const activities = JSON.parse(localStorage.getItem('activities'));
     const updatedActivities = activities.map(activity =>
         activity.id === activityId ? {...activity, completed: true, date: new Date().toISOString()} : activity
@@ -61,7 +58,7 @@ export function completeActivity(activityId) {
     updateWeeklyStats();
 }
 
-export function updateRecommendations() {
+function updateRecommendations() {
     const recommendationList = document.getElementById('recommendationList');
     recommendationList.innerHTML = '';
     const recommendations = JSON.parse(localStorage.getItem('recommendations'));
@@ -72,7 +69,7 @@ export function updateRecommendations() {
     });
 }
 
-export function updateWeeklyStats() {
+function updateWeeklyStats() {
     const weeklyStats = document.getElementById('weeklyStats');
     weeklyStats.innerHTML = '';
     const activities = JSON.parse(localStorage.getItem('activities'));
@@ -92,7 +89,7 @@ export function updateWeeklyStats() {
     }
 }
 
-export function showCongratulationsMessage() {
+function showCongratulationsMessage() {
     const todoList = document.getElementById('todoList');
     todoList.innerHTML = '<p>¡Felicidades! Has completado todas tus actividades.</p>';
     const loadNewActivitiesBtn = document.createElement('button');
@@ -101,7 +98,7 @@ export function showCongratulationsMessage() {
     todoList.appendChild(loadNewActivitiesBtn);
 }
 
-export function loadNewActivities() {
+function loadNewActivities() {
     const activities = JSON.parse(localStorage.getItem('activities'));
     const newActivities = activities.map(activity => ({...activity, completed: false, date: null}));
     localStorage.setItem('activities', JSON.stringify(newActivities));
@@ -112,7 +109,7 @@ export function loadNewActivities() {
 
 
 // New function to add an activity
-export function addActivity() {
+function addActivity() {
     const activityName = prompt("Ingrese el nombre de la nueva actividad:");
     if (activityName) {
         const activities = JSON.parse(localStorage.getItem('activities'));
@@ -129,7 +126,7 @@ export function addActivity() {
 }
 
 // New function to clear activity history
-export function clearActivityHistory() {
+function clearActivityHistory() {
     if (confirm("¿Estás seguro de que quieres eliminar todo el historial de actividades?")) {
         const activities = JSON.parse(localStorage.getItem('activities'));
         const updatedActivities = activities.filter(activity => !activity.completed);
@@ -140,7 +137,7 @@ export function clearActivityHistory() {
 }
 
 // Modified updateActivityList function to include delete buttons
-export function updateActivityListInitial() {
+function updateActivityList() {
     const activityList = document.getElementById('activityList');
     const fullActivityList = document.getElementById('fullActivityList');
     activityList.innerHTML = '';
@@ -163,24 +160,24 @@ export function updateActivityListInitial() {
 }
 
 // New function to delete a single activity
-export function deleteActivity(activityId) {
+function deleteActivity(activityId) {
     if (confirm("¿Estás seguro de que quieres eliminar esta actividad?")) {
         const activities = JSON.parse(localStorage.getItem('activities'));
         const updatedActivities = activities.filter(activity => activity.id !== activityId);
         localStorage.setItem('activities', JSON.stringify(updatedActivities));
-        updateActivityListInitial();
+        updateActivityList();
         updateWeeklyStats();
     }
 }
 
 // Modified updateDashboard function
-export function updateDashboard() {
+function updateDashboard() {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if (currentUser) {
         document.getElementById('userName').textContent = currentUser.fullName;
         document.getElementById('userEmail').textContent = currentUser.email;
 
-        updateActivityListInitial();
+        updateActivityList();
         updateTodoList();
         updateRecommendations();
         updateWeeklyStats();
