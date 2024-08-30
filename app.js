@@ -72,3 +72,12 @@ function showView(viewId) {
     navLinks.forEach(link => link.classList.remove('active'));
     document.querySelector(`a[href="#${viewId}"]`)?.classList.add('active');
 }
+
+// Navegación
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const viewId = e.target.getAttribute('href').slice(1);
+        showView(viewId);
+    });
+});
