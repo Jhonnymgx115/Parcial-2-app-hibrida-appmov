@@ -88,3 +88,54 @@ showRegisterBtn.addEventListener('click', () => showView('register'));
 
 // Mostrar formulario de login
 showLoginBtn.addEventListener('click', () => showView('login'));
+
+// Manejo de login
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const username = e.target.elements[0].value;
+    const password = e.target.elements[1].value;
+    const users = JSON.parse(localStorage.getItem('users'));
+    const user = users.find(u => u.username === username && u.password === password);
+    if (user) {
+        localStorage.setItem('currentUser', JSON.stringify(user));
+        showView('home');
+        updateDashboard();
+        updateNavigation(true);
+    } else {
+        alert('Usuario o contraseña incorrectos');
+    }
+});
+
+// Manejo de registro
+registerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fullName = e.target.elements[0].value;
+    const email = e.target.elements[1].value;
+    const password = e.target.elements[2].value;
+    const confirmPassword = e.target.elements[3].value;
+
+    if (password !== confirmPassword) {
+        alert('Las contraseñas no coinciden');
+        return;
+    }
+
+    const users = JSON.parse(localStorage.getItem('users'));
+    const newUser = {
+        username: email,
+        password: password,
+        email: email,
+        fullName: fullName,
+        activityHistory: [],
+        weeklyStats: {
+            totalActivities: 0,
+            totalDuration: 0,
+            favoriteActivity: 'N/A'
+        }
+    };
+    users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('currentUser', JSON.stringify(newUser));
+    showView('home');
+    updateDashboard();
+    updateNavigation(true);
+});
