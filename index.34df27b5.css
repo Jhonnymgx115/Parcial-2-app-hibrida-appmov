@@ -53,7 +53,7 @@ body {
 
 .navbar-menu a:hover, .navbar-menu a.active {
   background-color: var(--accent-color);
-  border-radius: 4px;
+  border-radius: 14px;
 }
 
 main {
@@ -92,7 +92,7 @@ main {
 }
 
 .content-image img {
-  border-radius: 8px;
+  border-radius: 18px;
   max-width: 100%;
   height: auto;
   box-shadow: 0 4px 6px #0000001a;
@@ -100,7 +100,7 @@ main {
 
 .form {
   background-color: var(--secondary-color);
-  border-radius: 8px;
+  border-radius: 18px;
   margin-bottom: 2rem;
   padding: 2rem;
   box-shadow: 0 4px 6px #0000001a;
@@ -114,7 +114,7 @@ main {
 
 .form input {
   border: 1px solid var(--accent-color);
-  border-radius: 4px;
+  border-radius: 14px;
   width: 100%;
   margin-bottom: 1rem;
   padding: .8rem;
@@ -126,7 +126,7 @@ main {
   color: var(--secondary-color);
   cursor: pointer;
   border: none;
-  border-radius: 4px;
+  border-radius: 14px;
   width: 100%;
   padding: .8rem;
   font-size: 1rem;
@@ -155,7 +155,7 @@ main {
 .account-buttons button {
   cursor: pointer;
   border: none;
-  border-radius: 4px;
+  border-radius: 14px;
   padding: .8rem;
   font-size: 1rem;
   transition: background-color .3s;
@@ -177,7 +177,7 @@ main {
   cursor: pointer;
   text-align: center;
   border: none;
-  border-radius: 4px;
+  border-radius: 14px;
   width: 100%;
   padding: .8rem;
   font-size: 1rem;
@@ -222,7 +222,7 @@ footer {
   text-align: center;
   width: 100%;
   padding: 1rem;
-  position: fixed;
+  position: relative;
   bottom: 0;
 }
 
