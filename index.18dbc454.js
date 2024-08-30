@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"idJKp":[function(require,module,exports) {
+})({"j2YDk":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -595,7 +595,7 @@ function initApp() {
     const currentUser = localStorage.getItem("currentUser");
     if (currentUser) {
         (0, _navegationSettings.showView)("home");
-        (0, _dashboardSettings.updateDashboardInitial)();
+        (0, _dashboardSettings.updateDashboard)();
     } else (0, _navegationSettings.showView)("login");
     (0, _navegationSettings.updateNavVisibility)();
 }
@@ -675,7 +675,7 @@ function initializeLocalStorage() {
     if (!localStorage.getItem("recommendations")) localStorage.setItem("recommendations", JSON.stringify(predefinedRecommendations));
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"kPyLH"}],"kPyLH":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -709,36 +709,19 @@ exports.export = function(dest, destName, get) {
 // Actualizar dashboard
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "updateDashboardInitial", ()=>updateDashboardInitial);
-// Funciones para actualizar las secciones del dashboard
-parcelHelpers.export(exports, "updateActivityList", ()=>updateActivityList);
-parcelHelpers.export(exports, "updateTodoList", ()=>updateTodoList);
-parcelHelpers.export(exports, "completeActivity", ()=>completeActivity);
-parcelHelpers.export(exports, "updateRecommendations", ()=>updateRecommendations);
-parcelHelpers.export(exports, "updateWeeklyStats", ()=>updateWeeklyStats);
-parcelHelpers.export(exports, "showCongratulationsMessage", ()=>showCongratulationsMessage);
-parcelHelpers.export(exports, "loadNewActivities", ()=>loadNewActivities);
-// New function to add an activity
-parcelHelpers.export(exports, "addActivity", ()=>addActivity);
-// New function to clear activity history
-parcelHelpers.export(exports, "clearActivityHistory", ()=>clearActivityHistory);
-// Modified updateActivityList function to include delete buttons
-parcelHelpers.export(exports, "updateActivityListInitial", ()=>updateActivityListInitial);
-// New function to delete a single activity
-parcelHelpers.export(exports, "deleteActivity", ()=>deleteActivity);
-// Modified updateDashboard function
 parcelHelpers.export(exports, "updateDashboard", ()=>updateDashboard);
-function updateDashboardInitial() {
+function updateDashboard() {
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
     if (currentUser) {
         document.getElementById("userName").textContent = currentUser.fullName;
         document.getElementById("userEmail").textContent = currentUser.email;
-        updateActivityListInitial();
+        updateActivityList();
         updateTodoList();
         updateRecommendations();
         updateWeeklyStats();
     }
 }
+// Funciones para actualizar las secciones del dashboard
 function updateActivityList() {
     const activityList = document.getElementById("activityList");
     activityList.innerHTML = "";
@@ -823,6 +806,7 @@ function loadNewActivities() {
     updateActivityList();
     updateWeeklyStats();
 }
+// New function to add an activity
 function addActivity() {
     const activityName = prompt("Ingrese el nombre de la nueva actividad:");
     if (activityName) {
@@ -838,6 +822,7 @@ function addActivity() {
         updateTodoList();
     }
 }
+// New function to clear activity history
 function clearActivityHistory() {
     if (confirm("\xbfEst\xe1s seguro de que quieres eliminar todo el historial de actividades?")) {
         const activities = JSON.parse(localStorage.getItem("activities"));
@@ -847,7 +832,8 @@ function clearActivityHistory() {
         updateWeeklyStats();
     }
 }
-function updateActivityListInitial() {
+// Modified updateActivityList function to include delete buttons
+function updateActivityList() {
     const activityList = document.getElementById("activityList");
     const fullActivityList = document.getElementById("fullActivityList");
     activityList.innerHTML = "";
@@ -866,21 +852,23 @@ function updateActivityListInitial() {
         }
     });
 }
+// New function to delete a single activity
 function deleteActivity(activityId) {
     if (confirm("\xbfEst\xe1s seguro de que quieres eliminar esta actividad?")) {
         const activities = JSON.parse(localStorage.getItem("activities"));
         const updatedActivities = activities.filter((activity)=>activity.id !== activityId);
         localStorage.setItem("activities", JSON.stringify(updatedActivities));
-        updateActivityListInitial();
+        updateActivityList();
         updateWeeklyStats();
     }
 }
+// Modified updateDashboard function
 function updateDashboard() {
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
     if (currentUser) {
         document.getElementById("userName").textContent = currentUser.fullName;
         document.getElementById("userEmail").textContent = currentUser.email;
-        updateActivityListInitial();
+        updateActivityList();
         updateTodoList();
         updateRecommendations();
         updateWeeklyStats();
@@ -890,7 +878,7 @@ function updateDashboard() {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"kPyLH"}],"9LWDa":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9LWDa":[function(require,module,exports) {
 // Elementos del DOM
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -926,7 +914,7 @@ function showView(viewId) {
     document.querySelector(`a[href="#${viewId}"]`)?.classList.add("active");
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"kPyLH"}],"2ygYe":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2ygYe":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ManageSession", ()=>ManageSession);
@@ -965,7 +953,7 @@ function ManageSession() {
         localStorage.setItem("users", JSON.stringify(users));
         localStorage.setItem("currentUser", JSON.stringify(newUser));
         (0, _navegationSettings.showView)("home");
-        (0, _dashboardSettings.updateDashboardInitial)();
+        (0, _dashboardSettings.updateDashboard)();
         (0, _navegationSettings.updateNavVisibility)();
     });
     // Manejo de Logout
@@ -984,7 +972,7 @@ function ManageSession() {
         if (user) {
             localStorage.setItem("currentUser", JSON.stringify(user));
             (0, _navegationSettings.showView)("home");
-            (0, _dashboardSettings.updateDashboardInitial)();
+            (0, _dashboardSettings.updateDashboard)();
             (0, _navegationSettings.updateNavVisibility)();
         } else alert("Usuario o contrase\xf1a incorrectos");
     });
@@ -998,6 +986,6 @@ function validatePassword(password) {
     return password.length >= minLength && hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 }
 
-},{"../Navegation/Navegation_Settings":"9LWDa","../Dashboard/Dashboard_Settings":"edo4x","@parcel/transformer-js/src/esmodule-helpers.js":"kPyLH"}]},["idJKp","1SICI"], "1SICI", "parcelRequireeeed")
+},{"../Navegation/Navegation_Settings":"9LWDa","../Dashboard/Dashboard_Settings":"edo4x","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["j2YDk","1SICI"], "1SICI", "parcelRequireeeed")
 
 //# sourceMappingURL=index.18dbc454.js.map
