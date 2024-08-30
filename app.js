@@ -64,3 +64,11 @@ const predefinedUsers = [
 if (!localStorage.getItem('users')) {
     localStorage.setItem('users', JSON.stringify(predefinedUsers));
 }
+
+// Función para cambiar entre vistas
+function showView(viewId) {
+    views.forEach(view => view.style.display = 'none');
+    document.getElementById(viewId).style.display = 'block';
+    navLinks.forEach(link => link.classList.remove('active'));
+    document.querySelector(`a[href="#${viewId}"]`)?.classList.add('active');
+}
