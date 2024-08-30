@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainTrack</title>
+    <link rel="stylesheet" href="/index.34df27b5.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-brand">
+        <img src="/logo.40044551.jpg" alt="TrainTrack Logo" class="logo">
+        OptiTrain
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+        <a href="#home" class="active">Inicio</a>
+        <a href="#profile">Perfil</a>
+        <a href="#login" id="logoutButton">Cerrar Sesión</a>
+    </div>
+</nav>
+
+<main>
+    <section id="login" class="section view">
+        <div class="hero">
+            <h1>Bienvenido a TrainTrack</h1>
+            <p>Tu compañero de entrenamiento personal</p>
+        </div>
+        <div class="content-image">
+            <img src="/Entrenamiento.56a352bd.jpg" alt="Entrenamiento">
+        </div>
+        <form id="loginForm" class="form">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" placeholder="Usuario" required="">
+            <input type="password" placeholder="Contraseña" required="">
+            <button type="submit">Iniciar Sesión</button>
+            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+        </form>
+        <div class="account-buttons">
+            <button class="google-btn">Continuar con Google</button>
+            <button class="facebook-btn">Continuar con Facebook</button>
+        </div>
+        <a href="#" id="showRegister" class="register-btn">Crear una cuenta</a>
+    </section>
+
+    <section id="register" class="section view" style="display: none">
+        <div class="hero">
+            <h1>Únete a TrainTrack</h1>
+            <p>Comienza tu viaje fitness hoy</p>
+        </div>
+        <div class="content-image">
+            <img src="/Registro.38c8869f.jpg" alt="Registro">
+        </div>
+        <form id="registerForm" class="form">
+            <h2>Registro</h2>
+            <input type="text" placeholder="Nombre completo" required="">
+            <input type="email" placeholder="Correo electrónico" required="">
+            <input type="password" placeholder="Contraseña" required="">
+            <input type="password" placeholder="Confirmar contraseña" required="">
+            <label>
+                <input type="checkbox" required="">
+                Acepto los términos y condiciones
+            </label>
+            <button type="submit">Registrarse</button>
+        </form>
+        <div class="account-buttons">
+            <button class="google-btn">Registrarse con Google</button>
+            <button class="facebook-btn">Registrarse con Facebook</button>
+        </div>
+        <a href="#" id="showLogin" class="login-btn">Ya tengo una cuenta</a>
+    </section>
+
+    <section id="home" class="section view" style="display: none">
+        <div class="hero">
+            <h1>Dashboard</h1>
+            <p>Resumen de tu progreso</p>
+        </div>
+        <div class="content-image">
+            <img src="/Progreso.b2459df4.jpg" alt="Dashboard">
+        </div>
+        <div class="training-history">
+            <h2>Historial de Actividades</h2>
+            <ul id="activityList"></ul>
+            <button id="clearHistoryBtn">Limpiar historial</button>
+        </div>
+        <div class="todo-list">
+            <h2>Actividades por Realizar</h2>
+            <ul id="todoList"></ul>
+            <button id="addActivityBtn">Agregar nueva actividad</button>
+        </div>
+        <div class="recommendations">
+            <h2>Recomendaciones</h2>
+            <ul id="recommendationList"></ul>
+        </div>
+        <div class="user-stats">
+            <h2>Estadísticas Semanales</h2>
+            <ul id="weeklyStats"></ul>
+        </div>
+    </section>
+
+    <section id="profile" class="section view" style="display: none">
+        <div class="hero">
+            <h1>Perfil de Usuario</h1>
+        </div>
+        <div class="user-info">
+            <img src="/profile.fbf38018.webp" alt="Foto de perfil" class="profile-pic">
+            <h2 id="userName"></h2>
+            <p id="userEmail"></p>
+        </div>
+        <div class="activity-history">
+            <h2>Historial Completo de Actividades</h2>
+            <ul id="fullActivityList"></ul>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 TrainTrack App. Todos los derechos reservados.</p>
+</footer>
+
+<script src="/index.aa69868b.js"></script>
+<script src="/Parcial-2-app-hibrida-appmov.59712999.js"></script></body>
+</html>
