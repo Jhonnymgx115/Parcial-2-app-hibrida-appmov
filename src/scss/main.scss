@@ -1,0 +1,33 @@
+
+// main.scss
+@import 'variables';
+@import 'base';
+@import 'navbar';
+@import 'login';
+@import 'register';
+@import 'home';
+@import 'profile';
+
+footer {
+  background-color: $primary-color;
+  color: $secondary-color;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+
+    &-menu {
+      margin-top: 1rem;
+    }
+  }
+
+  .account-buttons {
+    flex-direction: column;
+  }
+}
