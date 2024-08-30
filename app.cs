@@ -39,3 +39,22 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-menu a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.active {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
