@@ -193,3 +193,60 @@ main {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+
+.training-history,
+.todo-list,
+.recommendations,
+.activity-history,
+.user-stats {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.training-history h2,
+.todo-list h2,
+.recommendations h2,
+.activity-history h2,
+.user-stats h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-menu {
+        margin-top: 1rem;
+    }
+
+    .account-buttons {
+        flex-direction: column;
+    }
+}
