@@ -1,11 +1,3 @@
-:root {
-  --primary-color: #718355;
-  --secondary-color: #e9f5db;
-  --text-color: #333;
-  --background-color: #fff;
-  --accent-color: #a9c088;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,16 +5,16 @@
 }
 
 body {
-  color: var(--text-color);
-  background-color: var(--background-color);
+  color: #333;
+  background-color: #fff;
   font-family: Roboto, sans-serif;
   line-height: 1.6;
 }
 
 .navbar {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  color: #e9f5db;
   z-index: 1000;
+  background-color: #718355;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
@@ -38,68 +30,54 @@ body {
   display: flex;
 }
 
-.logo {
+.navbar-brand .logo {
   width: 40px;
   height: 40px;
   margin-right: 10px;
 }
 
 .navbar-menu a {
-  color: var(--secondary-color);
+  color: #e9f5db;
   padding: .5rem 1rem;
   text-decoration: none;
   transition: background-color .3s;
 }
 
 .navbar-menu a:hover, .navbar-menu a.active {
-  background-color: var(--accent-color);
+  background-color: #a9c088;
   border-radius: 14px;
 }
 
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.view {
-  display: none;
-}
-
-.view.active {
+.forgot-password {
+  text-align: center;
+  color: #718355;
+  margin-top: 1rem;
+  text-decoration: none;
   display: block;
 }
 
-.hero {
+.register-btn {
+  color: #333;
+  cursor: pointer;
   text-align: center;
-  margin-bottom: 2rem;
+  background-color: #a9c088;
+  border: none;
+  border-radius: 14px;
+  width: 100%;
+  padding: .8rem;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color .3s;
+  display: block;
 }
 
-.hero h1 {
-  color: var(--primary-color);
-  margin-bottom: .5rem;
-  font-size: 2.5rem;
-}
-
-.hero p {
-  color: var(--accent-color);
-  font-size: 1.2rem;
-}
-
-.content-image {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.content-image img {
-  border-radius: 18px;
-  max-width: 100%;
-  height: auto;
-  box-shadow: 0 4px 6px #0000001a;
+.register-btn:hover {
+  color: #e9f5db;
+  background-color: #718355;
 }
 
 .form {
-  background-color: var(--secondary-color);
+  background-color: #e9f5db;
   border-radius: 18px;
   margin-bottom: 2rem;
   padding: 2rem;
@@ -108,12 +86,12 @@ main {
 
 .form h2 {
   text-align: center;
-  color: var(--primary-color);
+  color: #718355;
   margin-bottom: 1.5rem;
 }
 
 .form input {
-  border: 1px solid var(--accent-color);
+  border: 1px solid #a9c088;
   border-radius: 14px;
   width: 100%;
   margin-bottom: 1rem;
@@ -122,9 +100,9 @@ main {
 }
 
 .form button {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  color: #e9f5db;
   cursor: pointer;
+  background-color: #718355;
   border: none;
   border-radius: 14px;
   width: 100%;
@@ -134,15 +112,7 @@ main {
 }
 
 .form button:hover {
-  background-color: var(--accent-color);
-}
-
-.forgot-password {
-  text-align: center;
-  color: var(--primary-color);
-  margin-top: 1rem;
-  text-decoration: none;
-  display: block;
+  background-color: #a9c088;
 }
 
 .account-buttons {
@@ -161,21 +131,21 @@ main {
   transition: background-color .3s;
 }
 
-.google-btn {
+.account-buttons .google-btn {
   color: #fff;
   background-color: #4285f4;
 }
 
-.facebook-btn {
+.account-buttons .facebook-btn {
   color: #fff;
   background-color: #3b5998;
 }
 
-.register-btn, .login-btn {
-  background-color: var(--accent-color);
-  color: var(--text-color);
+.login-btn {
+  color: #333;
   cursor: pointer;
   text-align: center;
+  background-color: #a9c088;
   border: none;
   border-radius: 14px;
   width: 100%;
@@ -186,22 +156,45 @@ main {
   display: block;
 }
 
-.register-btn:hover, .login-btn:hover {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+.login-btn:hover {
+  color: #e9f5db;
+  background-color: #718355;
 }
 
-.training-history, .todo-list, .recommendations, .activity-history, .user-stats {
-  background-color: var(--secondary-color);
+.content-image {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content-image img {
+  border-radius: 18px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+.training-history, .todo-list, .recommendations, .user-stats {
+  background-color: #e9f5db;
   border-radius: 8px;
   margin-bottom: 2rem;
   padding: 1.5rem;
   box-shadow: 0 4px 6px #0000001a;
 }
 
-.training-history h2, .todo-list h2, .recommendations h2, .activity-history h2, .user-stats h2 {
-  color: var(--primary-color);
+.training-history h2, .todo-list h2, .recommendations h2, .user-stats h2 {
+  color: #718355;
   margin-bottom: 1rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  color: #718355;
+  margin-bottom: .5rem;
+  font-size: 2.5rem;
 }
 
 .user-info {
@@ -209,17 +202,30 @@ main {
   margin-bottom: 2rem;
 }
 
-.profile-pic {
+.user-info .profile-pic {
   border-radius: 50%;
   width: 100px;
   height: 100px;
   margin-bottom: 1rem;
 }
 
+.activity-history {
+  background-color: #e9f5db;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+.activity-history h2 {
+  color: #718355;
+  margin-bottom: 1rem;
+}
+
 footer {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  color: #e9f5db;
   text-align: center;
+  background-color: #718355;
   width: 100%;
   padding: 1rem;
   position: relative;

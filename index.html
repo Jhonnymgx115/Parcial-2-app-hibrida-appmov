@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>TrainTrack</title>
     <link rel="stylesheet" href="/index.34df27b5.css">
 </head>
+
+
 <body>
+
 <nav class="navbar">
     <div class="navbar-brand">
         <img src="/logo.40044551.jpg" alt="TrainTrack Logo" class="logo">
         OptiTrain
     </div>
+
+
     <div id="navbarMenu" class="navbar-menu">
         <a href="#home" class="active">Inicio</a>
         <a href="#profile">Perfil</a>
@@ -19,7 +25,9 @@
     </div>
 </nav>
 
+
 <main>
+
     <section id="login" class="section view">
         <div class="hero">
             <h1>Bienvenido a TrainTrack</h1>
@@ -29,9 +37,15 @@
             <img src="/Entrenamiento.56a352bd.jpg" alt="Entrenamiento">
         </div>
         <form id="loginForm" class="form">
+
             <h2>Iniciar Sesión</h2>
-            <input type="text" placeholder="Usuario" required="">
-            <input type="password" placeholder="Contraseña" required="">
+            <label>
+                <input type="text" placeholder="Usuario" required="">
+            </label>
+            <label>
+                <input type="password" placeholder="Contraseña" required="">
+            </label>
+
             <button type="submit">Iniciar Sesión</button>
             <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
         </form>
@@ -41,6 +55,33 @@
         </div>
         <a href="#" id="showRegister" class="register-btn">Crear una cuenta</a>
     </section>
+
+
+
+
+    <section id="forgot-password" class="section view" style="display: none">
+        <div class="hero">
+            <h1>Recuperar Contraseña</h1>
+            <p>Ingrese su correo electrónico para restablecer su contraseña</p>
+        </div>
+        <div class="content-image">
+            <img src="/RecuperarPassword.74bcc44c.jpg" alt="Recuperar contraseña">
+        </div>
+        <form id="forgotPasswordForm" class="form">
+            <h2>Restablecer Contraseña</h2>
+            <label>
+                <input type="email" placeholder="Correo electrónico" required="">
+            </label>
+
+            <button type="submit">Enviar enlace de restablecimiento</button>
+
+            <p id="passwordResetMessage"></p>
+        </form>
+        <a href="#" id="backToLogin" class="login-btn">Volver a Iniciar Sesión</a>
+    </section>
+
+
+
 
     <section id="register" class="section view" style="display: none">
         <div class="hero">
@@ -52,10 +93,18 @@
         </div>
         <form id="registerForm" class="form">
             <h2>Registro</h2>
-            <input type="text" placeholder="Nombre completo" required="">
-            <input type="email" placeholder="Correo electrónico" required="">
-            <input type="password" placeholder="Contraseña" required="">
-            <input type="password" placeholder="Confirmar contraseña" required="">
+            <label>
+                <input type="text" placeholder="Nombre completo" required="">
+            </label>
+            <label>
+                <input type="email" placeholder="Correo electrónico" required="">
+            </label>
+            <label>
+                <input type="password" placeholder="Contraseña" required="">
+            </label>
+            <label>
+                <input type="password" placeholder="Confirmar contraseña" required="">
+            </label>
             <label>
                 <input type="checkbox" required="">
                 Acepto los términos y condiciones
@@ -68,6 +117,9 @@
         </div>
         <a href="#" id="showLogin" class="login-btn">Ya tengo una cuenta</a>
     </section>
+
+
+
 
     <section id="home" class="section view" style="display: none">
         <div class="hero">
@@ -97,6 +149,9 @@
         </div>
     </section>
 
+
+
+
     <section id="profile" class="section view" style="display: none">
         <div class="hero">
             <h1>Perfil de Usuario</h1>
@@ -111,12 +166,20 @@
             <ul id="fullActivityList"></ul>
         </div>
     </section>
+
+
+
 </main>
 
+
+
 <footer>
-    <p>© 2024 TrainTrack App. Todos los derechos reservados.</p>
+    <span>© 2024 TrainTrack App.</span>
+        <span>Todos los derechos reservados.</span>
+    <a href="https://github.com/Jhonnymgx115/Plataforma-de-Notas-Estudiantil" target="_blank">Visit our GitHub</a>
 </footer>
 
-<script src="/index.aa69868b.js"></script>
-<script src="/Parcial-2-app-hibrida-appmov.59712999.js"></script></body>
+
+<script src="/index.18dbc454.js" defer=""></script>
+</body>
 </html>
