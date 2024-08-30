@@ -216,10 +216,10 @@
         function validateForm() {
             const password = document.getElementById('password').value;
             const passwordError = document.getElementById('passwordError');
-            const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/ ;
             
             if (!passwordRegex.test(password)) {
-                passwordError.style.display = 'block';
+                passwordError.style.display = 'block password';
                 return false;
             }
             passwordError.style.display = 'none';
