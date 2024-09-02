@@ -1,5 +1,4 @@
 # Parcial-2-app-hibrida-appmov
-# Parcial-2-app-hibrida-appmov
 
 # OptiTrain
 ## Descripción General
