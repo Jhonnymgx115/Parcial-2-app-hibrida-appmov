@@ -1,6 +1,3 @@
-![WhatsApp Image 2024-09-15 at 8 27 28 PM](https://github.com/user-attachments/assets/c44a7c7d-0675-4ae9-9e96-92da27918013)
-![WhatsApp Image 2024-09-15 at 8 03 52 PM](https://github.com/user-attachments/assets/88b2df92-ea2b-4539-9195-69f4fe86960e)
-![WhatsApp Image 2024-09-15 at 8 27 28 PM](https://github.com/user-attachments/assets/97f6c822-a413-4fcd-8878-d2dd055bea56)
 # Parcial-2-app-hibrida-appmov
 
 # OptiTrain
@@ -47,3 +44,7 @@ Las contribuciones a OptiTrain son bienvenidas. Puedes clonar el repositorio, ha
 
 ## Contacto
 Si tienes preguntas, sugerencias o problemas, no dudes en abrir un issue en el repositorio o contactar directamente al equipo de desarrollo.
+
+![WhatsApp Image 2024-09-15 at 8 27 28 PM](https://github.com/user-attachments/assets/c44a7c7d-0675-4ae9-9e96-92da27918013)
+![WhatsApp Image 2024-09-15 at 8 03 52 PM](https://github.com/user-attachments/assets/88b2df92-ea2b-4539-9195-69f4fe86960e)
+![WhatsApp Image 2024-09-15 at 8 26 16 PM](https://github.com/user-attachments/assets/e53b66b2-5e8e-454f-91ad-1d34dd7b0bf3)
